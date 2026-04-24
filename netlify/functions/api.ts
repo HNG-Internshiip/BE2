@@ -1,8 +1,8 @@
 import serverless from "serverless-http";
 import express, { Request, Response, NextFunction } from "express";
 import cors from "cors";
-import { initDB } from "./src/config/db";
-import profileRoutes from "./src/routes/profiles.routes";
+import { initDB } from "src/config/db";
+import profileRoutes from "src/routes/profiles.routes";
 
 const app = express();
 
