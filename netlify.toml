@@ -1,0 +1,13 @@
+[build]
+  command   = "npm run build"
+  publish   = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler          = "esbuild"
+  external_node_modules = ["pg", "pg-native"]
+
+[[redirects]]
+  from   = "/api/*"
+  to     = "/.netlify/functions/api/:splat"
+  status = 200
